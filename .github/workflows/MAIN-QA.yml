@@ -1,0 +1,23 @@
+name: DEV/QA
+
+on:
+  push:
+    branches: [ "main", "QA" ]
+  pull_request:
+    branches: [ "main", "QA" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Fazer algo na branch main
+        if: github.ref == 'refs/heads/main'
+        run: echo "Estou na branch main"
+
+      - name: Fazer algo na branch develop
+        if: github.ref == 'refs/heads/QA'
+        run: echo "Estou na branch QA"
