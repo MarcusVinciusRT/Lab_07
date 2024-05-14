@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Fazer algo na branch main
         if: github.ref == 'refs/heads/main'
