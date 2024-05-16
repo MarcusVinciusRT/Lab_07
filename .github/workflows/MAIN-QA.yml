@@ -18,6 +18,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: echo "Estou na branch main"
 
-      - name: Fazer algo na branch develop
+      - name: Fazer algo na branch QA
         if: github.ref == 'refs/heads/QA'
         run: echo "Estou na branch QA"
